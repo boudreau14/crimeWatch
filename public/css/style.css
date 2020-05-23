@@ -1,0 +1,228 @@
+.wrapper {
+    background-image: url(/images/chicagowrap.jpg);
+    background-repeat: no-repeat;
+    min-height: 850px;
+
+}
+
+nav {
+    width: auto;
+}
+
+.heading {
+    text-align: center;
+    padding-top: 10%;
+}
+
+/* nav {
+    text-align: center;
+} */
+
+.heading h1 {
+    color: #fff;
+    font-size: 5rem;
+}
+
+.heading h5 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.card-body {
+    background-color: rgba(255, 255, 255, 0.52);
+
+}
+
+.searchForm,
+.wardForm {
+    margin-top: 30px auto 0 auto;
+    padding: inherit;
+    text-align: center;
+    font-size: 1.5em;
+    align-items: center;
+    /* padding: 20px; */
+}
+
+#align {
+    text-align: center;
+}
+
+.crimeDesc p,
+.crimeDesc h3 {
+    color: #fff;
+    font-weight: bolder;
+}
+
+#orh3 {
+    padding-top: 20px;
+    color: #fff;
+}
+
+.ui {
+    width: 80vh;
+    padding-left: 0;
+}
+
+#reportBtn {
+    margin-top: 40px;
+    /* padding-top: 40%;
+    padding-bottom: 40%; */
+    text-align: center;
+}
+
+/* .card-body {
+    background-color: #fff;
+} */
+
+#reportBtn a {
+
+    padding: 12px 25px;
+    background-color: none;
+    border: 3px solid #ED5565;
+    color: #ED5565;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    position: relative;
+    /* top: 80px; */
+    overflow: hidden;
+    transition: .5s;
+    /* display: inline-block; */
+}
+
+#reportBtn a:hover {
+    color: #fff;
+}
+
+#reportBtn a::before {
+    content: "";
+    background-color: #ED5565;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: .5s;
+}
+
+#reportBtn a:hover::before {
+    height: 100%;
+}
+
+.btn-danger {
+    margin-top: 15%;
+    width: 20vh;
+}
+
+@media (max-width: 991.98px) {
+    body {
+        width: 100%;
+    }
+
+    .card-body {
+        /* padding: auto; */
+        margin: 5% auto;
+    }
+
+    #reportBtn {
+        padding: auto;
+        margin-top: auto;
+        padding-top: auto;
+        padding-bottom: auto;
+        /* height: 50%; */
+    }
+
+    header {
+        padding-bottom: 25px;
+    }
+
+    nav {
+        width: 100vh;
+    }
+
+    /* .l-container {
+        padding-top: 20px;
+        padding-left: auto;
+        padding-right: auto;
+        text-align: center;
+    }
+    .r-container {
+        padding-top: 20px;
+        padding-left: auto;
+        padding-right: auto;
+        text-align: center;
+    } */
+    #report-info {
+        display: none;
+    }
+
+    article {
+        /* width: 250px; */
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* BODY SECTION */
+
+/* .l-container {
+    padding-top: 50px;
+    padding-left: 40vh;
+    padding-right: auto;
+    text-align: center;
+}
+.r-container {
+    padding-top: 50px;
+    padding-left: 40vh;
+    padding-right: auto;
+    text-align: center;
+} */
+
+.flag-image {
+    height: 300px;
+    width: 275px;
+    border-radius: 50%;
+}
+
+.pb {
+    padding-bottom: 150px;
+}
+
+
+#height {
+    height: 50px;
+    width: 5%;
+    border-top: 6px dotted gray;
+    /* margin-bottom: 40px; */
+    margin-top: 40px;
+}
+
+section {
+    background-color: rgb(251, 250, 250);
+}
+
+
+
+/* FOOTER SECTION */
+
+/* footer {
+    margin-top: 150px;
+} */
+
+
+/* CONTACT FORM */
+
+article {
+    background-image: url(/images/contact.png);
+    background-size: cover;
+    /* height: 100%; */
+
+}
+
+.card {
+    margin: 50px 20%;
+    width: 60%;
+    height: fit-content;
+    justify-content: center;
+}

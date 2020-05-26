@@ -48,7 +48,7 @@ var map, heatmap;
       // Heatmap data: 500 Points
       function getPoints() {
         for (var i = 0; i < markers.length; i++) {
-          var markers = 
+          var markers = markers
         }
 
         return [

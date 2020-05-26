@@ -23,7 +23,7 @@ router.get("/file", function (req, res) {
 
 router.get("/map/:neighborhood", function (req, res) {
   report.search(req.body.neighborhood, function(result) {
-  res.render("map");
+  res.render("file");
   });
 });
 

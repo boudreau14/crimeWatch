@@ -23,21 +23,23 @@ $(document).ready(function () {
   
     })
 // ("submit", function (event)
-    $(".searchForm").click(function(event) { 
-        
-        var loc = [];
-        console.log(event.target.value);
-        neighborhood = event.target.value;
-        loc.push(neighborhood);
-        console.log(neighborhood);
-        console.log(loc)
+    $(".neighborhood").on("submit", function(event) { 
         event.preventDefault();
-        $.ajax({
-            method: "GET",
-            url: "/map/" + loc
-        }).then(function (data) {
-            location.reload();
-        })
+        // var loc = [];
+        var neighborhood = $(this).children(".neighborhood").val();
+        // loc.push(neighborhood)
+        console.log(neighborhood);
+        // neighborhood = event.target.value;
+        // loc.push(neighborhood);
+        // console.log(neighborhood);
+        // console.log(loc)
+        
+        // $.ajax({
+        //     method: "GET",
+        //     url: "/map/" + loc
+        // }).then(function (data) {
+        //     location.reload();
+        // })
 
   
         // // var neighborhood = $(this).children(".neighborhood").val();

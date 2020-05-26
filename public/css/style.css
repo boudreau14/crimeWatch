@@ -6,7 +6,7 @@
 }
 
 nav {
-    width: auto;
+    width: 100vw;
 }
 
 .heading {
@@ -33,14 +33,13 @@ nav {
 
 }
 
-.searchForm,
-.wardForm {
+.searchForm {
     margin-top: 30px auto 0 auto;
     padding: inherit;
     text-align: center;
     font-size: 1.5em;
     align-items: center;
-    /* padding: 20px; */
+    
 }
 
 #align {
@@ -114,11 +113,15 @@ nav {
     width: 20vh;
 }
 
-@media (max-width: 991.98px) {
+@media only screen and (max-width: 991.98px) {
     body {
-        width: 100%;
+        width: 100vw;
+        
     }
-
+    .ui {
+        width: 80%;
+        
+    }
     .card-body {
         /* padding: auto; */
         margin: 5% auto;
@@ -136,22 +139,7 @@ nav {
         padding-bottom: 25px;
     }
 
-    nav {
-        width: 100vh;
-    }
-
-    /* .l-container {
-        padding-top: 20px;
-        padding-left: auto;
-        padding-right: auto;
-        text-align: center;
-    }
-    .r-container {
-        padding-top: 20px;
-        padding-left: auto;
-        padding-right: auto;
-        text-align: center;
-    } */
+    
     #report-info {
         display: none;
     }
@@ -162,22 +150,20 @@ nav {
         margin-left: 20px;
         margin-right: 20px;
     }
+    .flag-image {
+        height: 150px;
+        width: 125px;
+        border-radius: 50%;
+    }
+
+    footer {
+        width: 100vw;
+    }
 }
 
 /* BODY SECTION */
 
-/* .l-container {
-    padding-top: 50px;
-    padding-left: 40vh;
-    padding-right: auto;
-    text-align: center;
-}
-.r-container {
-    padding-top: 50px;
-    padding-left: 40vh;
-    padding-right: auto;
-    text-align: center;
-} */
+
 
 .flag-image {
     height: 300px;
@@ -213,16 +199,57 @@ section {
 
 /* CONTACT FORM */
 
-article {
+.image-report {
     background-image: url(/images/contact.png);
     background-size: cover;
     /* height: 100%; */
+    padding-top: 50px;
+    padding-bottom: 150px;
 
 }
 
 .card {
-    margin: 50px 20%;
-    width: 60%;
+    display: flex;
+    
+    width: 60vw;
     height: fit-content;
     justify-content: center;
 }
+
+#notes {
+    width: 20vw;
+}
+#send-report {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* file pages */
+
+.flex-container {
+
+    display: flex;
+    /* width: 80vh; */
+    text-align: center;
+    justify-content: center;
+}
+
+.wrapper-report {
+    background-color: indianred;
+    height: 1000px;
+    
+}
+
+#reportCard {
+    background-color: #fff;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.display-reports {
+    width: 80vw;
+}
+
+
+

@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    // DO NOT TOUCH THIS LINE BELOW
+    // $('.mdb-select').materialSelect();
+
+
 
     $(".report-form").on("submit", function (event) {
         event.preventDefault();
@@ -22,15 +26,29 @@ $(document).ready(function () {
 
     $(".searchForm").on("submit", function (event) {
         event.preventDefault();
-  
-        var hood_id = $(this).children(".hood_id").val();
+
+        var neighborhood = $(this).children(".neighborhood").val();
 
         $.ajax({
             method: "GET",
-            url: "/report/" + hood_id
+            url: "/map/" + neighborhood
         }).then(function (data) {
-            // SHOULD WE MAKE A NEW TABLE JUST FOR WHEN THINGS ARE REPORTED??
             location.reload();
         })
 
+  
+        // var neighborhood = $(this).children(".neighborhood").val();
+
+        console.log(event)
+        // $.ajax({
+        //     method: "GET",
+        //     url: "/crimewatch/" + hood_id
+        // }).then(function (data) {
+        //     // SHOULD WE MAKE A NEW TABLE JUST FOR WHEN THINGS ARE REPORTED??
+        //     // location.reload();
+        //     console.log(data)
+        // })
+
   });
+
+});

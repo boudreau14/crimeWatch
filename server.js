@@ -26,5 +26,5 @@ var routes = require("./controllers/crimeController");
 app.use(routes);
 
 app.listen(PORT, function() {
-  console.log("Listening on port:%s", PORT);
+  console.log("Server listening on: http://localhost:" + PORT);
 });

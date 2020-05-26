@@ -18,6 +18,10 @@ var report = {
     ], cb);
   },
 
+  search: function (hood, cb) {
+    orm.search("crimes_info", hood, cb)
+  }
+
 };
 
 

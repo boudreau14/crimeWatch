@@ -3,7 +3,6 @@ $(document).ready(function () {
     // $('.mdb-select').materialSelect();
 
 
-
     $(".report-form").on("submit", function (event) {
         event.preventDefault();
   
@@ -23,23 +22,27 @@ $(document).ready(function () {
         })
   
     })
-
-    $(".searchForm").on("submit", function (event) {
+// ("submit", function (event)
+    $(".searchForm").click(function(event) { 
+        
+        var loc = [];
+        console.log(event.target.value);
+        neighborhood = event.target.value;
+        loc.push(neighborhood);
+        console.log(neighborhood);
+        console.log(loc)
         event.preventDefault();
-
-        var neighborhood = $(this).children(".neighborhood").val();
-
         $.ajax({
             method: "GET",
-            url: "/map/" + neighborhood
+            url: "/map/" + loc
         }).then(function (data) {
             location.reload();
         })
 
   
-        // var neighborhood = $(this).children(".neighborhood").val();
+        // // var neighborhood = $(this).children(".neighborhood").val();
 
-        console.log(event)
+        // console.log(event)
         // $.ajax({
         //     method: "GET",
         //     url: "/crimewatch/" + hood_id

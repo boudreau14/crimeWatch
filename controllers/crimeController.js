@@ -23,14 +23,18 @@ router.get("/file", function (req, res) {
 
 router.get("/map/:neighborhood", function (req, res) {
   report.search(req.body.neighborhood, function(result) {
-  res.render("file");
+  res.render("map");
   });
 });
+
+router.get("/map/", function (req, res) {
+  res.render("map");
+  });
 
 router.post("/crimewatch/create", function (req, res) {
   console.log(res)
   report.create(req.body.neighborhood, req.body.date, req.body.police_called, req.body.type, req.body.notes, function (result) {
-    res.redirect("file");
+    res.redirect("/file");
   });
 });
 

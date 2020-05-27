@@ -47,9 +47,6 @@ var map, heatmap;
 
       // Heatmap data: 500 Points
       function getPoints() {
-        for (var i = 0; i < markers.length; i++) {
-          var markers = markers
-        }
 
         return [
           new google.maps.LatLng(37.782551, -122.445368),

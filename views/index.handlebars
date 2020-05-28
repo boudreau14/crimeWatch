@@ -35,38 +35,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6" id="align">
-                <div class="card-body" id="searchForm">
+                <div class="card-body" >
 
-                    <form action="/map/neighborhood" method="GET" class="searchForm">
-                        {{!-- <div class="crimeDesc">
-                                <p>Search by Crime type</p>
-                            </div>
-                            <br>
-                            <div class="input-group">
-
-                                <select class="ui dropdown">
-                                    <option value="">Description</option>
-                                    <option value="1">Homicide</option>
-                                    <option value="0">Robbery</option>
-                                    <option value="2">Car Jacking</option>
-                                    <option value="3">Assault</option>
-                                </select>
-
-                            </div>
-
-                        <div>
-                            <h3 id="orh3">--OR--</h3>
-                        </div> --}}
-
+                    <form action="/map/neighborhood" method="GET" class="searchForm" id="searchForm">
+                        <input type="text">
                         <div class="crimeDesc">
                             <p>Search by Neighborhood</p>
                         </div>
                         <br>
                         <div class="input-group">
-                            <select method="submit" value="" name="neighborhood" id="hood" class="neighborhood ui search dropdown"
-                                placeholder="Select Neighborhood" data-search="true">
-                                {{!-- <select name="hood_id" class="mdb-select md-form ui search dropdown hood_id" searchable="Search here.." data-search="true">
-                                    <option value="" disabled selected>Choose your country</option> --}}
+                            
+                        </div>
+                        
+
+                    <button type="submit" class="btn btn-danger">Click Me</button>
+                    </form>
+                    <select name="neighborhood" id="hood" class="neighborhood ui search dropdown"
+                                placeholder="Select Neighborhood" data-search="true" form="searchForm">
+                             
                                 <option value="">Select Neighborhood</option>
                                 <option value="Rogers Park">Rogers Park</option>
                                 <option value="West Ridge">West Ridge</option>
@@ -148,13 +134,6 @@
 
 
                             </select>
-                        </div>
-                        
-
-                    <input type="submit" class="btn btn-danger" value="Search Now">
-
-                    </form>
-                    
                 </div>
             </div>
 

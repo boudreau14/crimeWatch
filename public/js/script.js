@@ -23,10 +23,12 @@ $(document).ready(function () {
   
     })
 // ("submit", function (event)
-    $(".neighborhood").on("submit", function(event) { 
+    $(".searchForm").on("submit", function(event) { 
         event.preventDefault();
+        debugger
         // var loc = [];
-        var neighborhood = $(this).children(".neighborhood").val();
+        //var neighborhood = $('#hood').find(':selected').val()
+        var neighborhood = "{\"lat\":\"41.987\",\"long\":\"-87.662\"}"
         // loc.push(neighborhood)
         console.log(neighborhood);
         // neighborhood = event.target.value;
@@ -34,25 +36,20 @@ $(document).ready(function () {
         // console.log(neighborhood);
         // console.log(loc)
         
-        // $.ajax({
-        //     method: "GET",
-        //     url: "/map/" + loc
-        // }).then(function (data) {
-        //     location.reload();
-        // })
+    
 
   
         // // var neighborhood = $(this).children(".neighborhood").val();
 
         // console.log(event)
-        // $.ajax({
-        //     method: "GET",
-        //     url: "/crimewatch/" + hood_id
-        // }).then(function (data) {
-        //     // SHOULD WE MAKE A NEW TABLE JUST FOR WHEN THINGS ARE REPORTED??
-        //     // location.reload();
-        //     console.log(data)
-        // })
+        $.ajax({
+            method: "GET",
+            url: "/map/neighborhood?neighborhood=" + neighborhood
+        }).then(function (data) {
+            // SHOULD WE MAKE A NEW TABLE JUST FOR WHEN THINGS ARE REPORTED??
+            // location.reload();
+            console.log(data)
+        })
 
   });
 

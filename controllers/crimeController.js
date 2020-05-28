@@ -20,21 +20,23 @@ router.get("/report", function (req, res) {
 router.get("/file", function (req, res) {
   res.render("file");
 });
+router.get("/map", function (req, res) {
+  res.render("map");
+});
 
-router.get("/map/:neighborhood", function (req, res) {
-  report.search(req.body.neighborhood, function(result) {
+router.get("/map/neighborhood", function (req, res) {
+  console.log(req.query);
+  report.search(req.query.neighborhood, function(
+    
+  ) {
   res.render("map");
   });
 });
 
-router.get("/map/", function (req, res) {
-  res.render("map");
-  });
-
 router.post("/crimewatch/create", function (req, res) {
   console.log(res)
   report.create(req.body.neighborhood, req.body.date, req.body.police_called, req.body.type, req.body.notes, function (result) {
-    res.redirect("/file");
+    res.redirect("file");
   });
 });
 

@@ -58,11 +58,11 @@ var orm = {
     });
   },
   
-  search: function(table, hood, cb) {
-    var queryString = "SELECT `crime_lat`, `crime_long`, `hood_lat`, `hood_long` FROM " + table +
-    " WHERE neighborhood = '?'"
-
-    connection.query(queryString, hood, function(err, result) {
+  search: function(table, latlong, cb) {
+    latlong = JSON.parse(latlong)
+    var queryString = `SELECT 'crime_lat', 'crime_long' FROM ${table} WHERE hood_lat = '${latlong.lat}' AND hood_long = '${latlong.long}'`
+   
+    connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }

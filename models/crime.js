@@ -9,6 +9,12 @@ var report = {
     });
   },
 
+  allreported: function(cb) {
+    orm.all("crimes_reported", function (res) {
+      cb(res);
+    });
+  },
+
   //NEEDS UPDATING - DEREK
   create: function (hood, date, police, type, notes, cb) {
     orm.create("crimes_reported", [

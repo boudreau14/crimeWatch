@@ -22,7 +22,14 @@ router.get("/report", function (req, res) {
 
 //File get route -- page that displays user reported crimes
 router.get("/file", function (req, res) {
-  res.render("file");
+  report.allreported(function (data) {
+    var hbObj = {
+      crime_data: data,
+    }
+    console.log(hbObj)
+    res.render("file", hbObj);
+
+  })
 });
 
 //Map get route -- page that displays the crime heatmap

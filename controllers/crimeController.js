@@ -45,7 +45,7 @@ router.post("/crimewatch/create", function (req, res) {
     req.body.type,
     req.body.notes,
     function (result) {
-      res.redirect("file");
+      res.redirect("/file");
     }
   );
 });

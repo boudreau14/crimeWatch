@@ -26,6 +26,7 @@ function objToSql(ob) {
 }
 
 var orm = {
+  //Method to search for all information in a table
   all: function (tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function (err, result) {
@@ -37,6 +38,7 @@ var orm = {
     });
   },
 
+  //Method to add a reported crime to crimes_reported
   create: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 

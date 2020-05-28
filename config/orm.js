@@ -26,18 +26,18 @@ function objToSql(ob) {
 }
 
 var orm = {
-  all: function(tableInput, cb) {
+  all: function (tableInput, cb) {
     var queryString = "SELECT * FROM" + tableInput + ";";
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
       cb(result);
-      console.log(result)
+      console.log(result);
     });
   },
-  
-  create: function(table, cols, vals, cb) {
+
+  create: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -49,7 +49,7 @@ var orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, vals, function (err, result) {
       if (err) {
         throw err;
       }
@@ -57,21 +57,21 @@ var orm = {
       cb(result);
     });
   },
-  
-  search: function(table, latlong, cb) {
-    latlong = JSON.parse(latlong)
-    var queryString = `SELECT 'crime_lat', 'crime_long' FROM ${table} WHERE hood_lat = '${latlong.lat}' AND hood_long = '${latlong.long}'`
-   
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-      
-      cb(result)
-    });
-  }
-  
 
+  // ++++++ Future development for SEARCH function
+  
+  // search: function (table, latlong, cb) {
+  //   latlong = JSON.parse(latlong);
+  //   var queryString = `SELECT 'crime_lat', 'crime_long' FROM ${table} WHERE hood_lat = '${latlong.lat}' AND hood_long = '${latlong.long}'`;
+
+  //   connection.query(queryString, function (err, result) {
+  //     if (err) {
+  //       throw err;
+  //     }
+
+  //     cb(result);
+  //   });
+  // },
 };
 
 module.exports = orm;

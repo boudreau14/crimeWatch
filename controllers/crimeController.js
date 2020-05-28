@@ -3,100 +3,79 @@ var express = require("express");
 
 var router = express.Router();
 
-var path = require("path")
+//Requiring models
 var report = require("../models/crime.js");
 
+//Index get routes -- homepage
 router.get("/", function (req, res) {
   res.redirect("/crimewatch");
 });
 
 router.get("/crimewatch", function (req, res) {
   res.render("index");
-})
+});
 
+//Report get route -- page to report a crime
 router.get("/report", function (req, res) {
   res.render("report");
 });
+
+//File get route -- page that displays user reported crimes
 router.get("/file", function (req, res) {
   res.render("file");
 });
+
+//Map get route -- page that displays the crime heatmap
 router.get("/map", function (req, res) {
   res.render("map");
 });
 
-router.get("/map/neighborhood", function (req, res) {
-  console.log(req.query);
-  report.search(req.query.neighborhood, function(
-    
-  ) {
-  res.render("map");
-  });
-});
-
+//Post route to add a reported crime to crimes_reported
 router.post("/crimewatch/create", function (req, res) {
-  console.log(res)
-  report.create(req.body.neighborhood, req.body.date, req.body.police_called, req.body.type, req.body.notes, function (result) {
-    res.redirect("file");
-  });
+  console.log(res);
+  report.create(
+    req.body.neighborhood,
+    req.body.date,
+    req.body.police_called,
+    req.body.type,
+    req.body.notes,
+    function (result) {
+      res.redirect("file");
+    }
+  );
 });
 
-
+// ++++++ Future development for REPORT function
 router.get("/crimewatch/report", function (req, res) {
   neighborhood.all(function (hoodId) {
     var hbsObject = {
-      neighborhood: hoodId
+      neighborhood: hoodId,
     };
     console.log(hbsObject);
     res.render("file", hbsObject);
   });
 });
 
-
-
-
-
-
-// router.get("/api/neighborhoods", function(req, res) {
-//   crime.all(function(hooddata) {
-//     var hbsObject = {
-//       neighborhood_data: hooddata
-//     };
-//     console.log(hbsObject);
-//     res.render("crime", hbsObject);
-//   });
-// });
-
-// app.get("/api/neighborhood", function (req, res) {
-//   db.Reminder.findAll({
-//     where: {
-//       neighborhood: {
-//         $gt: today
-//       }
-//     }
-//   }).then(function (dbReminder) {
-//     res.json(dbReminder);
-//   });
-// });
-
-// router.post("/api/re", function(req, res) {
-//   burger.create(req.body.burger_name, function(result) {
-//     // Send back the ID of the new quote
-//     console.log(result)
-//     res.redirect("/");
-//   });
-// });
+// ++++++ Future development for SEARCH function
+router.get("/map/neighborhood", function (req, res) {
+  console.log(req.query);
+  report.search(req.query.neighborhood, function () {
+    res.render("map");
+  });
+});
 
 router.get("/api/crime_info/", function (req, res) {
   var hood = "neighborhood = " + req.params.neighborhood;
 
   console.log("neighborhood", hood);
 
-  router.get({
+  router.get(
+    {
       neighborhood: req.body.neighborhood,
       hood_lat: req.body.hood_lat,
       hood_long: req.body.hood_long,
       crime_lat: req.body.crime_lat,
-      crime_long: req.body.crime_long
+      crime_long: req.body.crime_long,
     },
     // condition,
     function (result) {
@@ -105,10 +84,8 @@ router.get("/api/crime_info/", function (req, res) {
         return res.status(404).end();
       }
       res.status(200).end();
-
     }
   );
-
 });
 
 module.exports = router;

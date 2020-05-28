@@ -61,7 +61,6 @@ var orm = {
   },
 
   // ++++++ Future development for SEARCH function
-  
   // search: function (table, latlong, cb) {
   //   latlong = JSON.parse(latlong);
   //   var queryString = `SELECT 'crime_lat', 'crime_long' FROM ${table} WHERE hood_lat = '${latlong.lat}' AND hood_long = '${latlong.long}'`;

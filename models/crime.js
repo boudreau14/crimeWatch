@@ -1,21 +1,23 @@
 //Dependency
 var orm = require("../config/orm.js");
 
-//Burger module used by controller
+//Report module used by crimeController
 var report = {
+  //Returns all info from Chicago crimes
   all: function (cb) {
     orm.all("crimes_info", function (res) {
       cb(res);
     });
   },
 
+  //Returns all from user reported crimes
   allreported: function(cb) {
     orm.all("crimes_reported", function (res) {
       cb(res);
     });
   },
 
-  //NEEDS UPDATING - DEREK
+  //Creates a new entry in our user reported crimes table
   create: function (hood, date, police, type, notes, cb) {
     orm.create("crimes_reported", [
       "neighborhood", "date", "police_called", "type", "notes"
@@ -24,34 +26,11 @@ var report = {
     ], cb);
   },
 
-  search: function (hood, cb) {
-    orm.search("crimes_info", hood, cb)
-  }
+  // ++++++ Future development for searching by neighborhood
+  // search: function (hood, cb) {
+  //   orm.search("crimes_info", hood, cb)
+  // }
 
 };
 
-
-//RANDOM CODE TO REFERENCE
-// POST route for saving a new post
-// app.post("/api/crimes_info", function (req, res) {
-//   db.Post.create(["neighborhood", "date", "arrest", "type", "desc"], [req.body.neighborhood, req.body.date, req.body.arrest, req.body.type, req.body.desc]).then(function (dbPost) {
-//     res.json(dbPost);
-//   });
-// });
-
-
-
-
-
-//Exports burger
-// module.exports = crime;
-// module.exports = function (sequalize, DataTypes) {
-//   var Report = sequalize.define("Report", {
-//     neighborhood: DataTypes.TEXT,
-//     date: DataTypes.STRING,
-//     arrest: DataTypes.STRING,
-//     type: DataTypes.TEXT,
-//     desc: DataTypes.TEXT
-//   })
 module.exports = report;
-  // return Report

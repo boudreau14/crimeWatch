@@ -10,29 +10,27 @@ var report = require("../models/crime.js");
 router.get("/", function (req, res) {
   res.redirect("/crimewatch");
 });
-
 router.get("/crimewatch", function (req, res) {
   res.render("index");
 });
 
-//Report get route -- page to report a crime
+//Report get route -- displays page to report a crime
 router.get("/report", function (req, res) {
   res.render("report");
 });
 
-//File get route -- page that displays user reported crimes
+//File get route -- displays page that renders user reported crimes
 router.get("/file", function (req, res) {
   report.allreported(function (data) {
     var hbObj = {
       crime_data: data,
-    }
-    console.log(hbObj)
+    };
+    console.log(hbObj);
     res.render("file", hbObj);
-
-  })
+  });
 });
 
-//Map get route -- page that displays the crime heatmap
+//Map get route -- displays page with crime heatmap
 router.get("/map", function (req, res) {
   res.render("map");
 });
@@ -84,10 +82,8 @@ router.get("/api/crime_info/", function (req, res) {
       crime_lat: req.body.crime_lat,
       crime_long: req.body.crime_long,
     },
-    // condition,
     function (result) {
       if (result.changedRows === 0) {
-        // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
       }
       res.status(200).end();

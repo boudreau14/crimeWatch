@@ -35,24 +35,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6" id="align">
-                <div class="card-body" >
+                <div class="card-body">
 
                     <form action="/map/neighborhood" method="GET" class="searchForm" id="searchForm">
-                        <input type="text">
+                        
                         <div class="crimeDesc">
                             <p>Search by Neighborhood</p>
                         </div>
                         <br>
                         <div class="input-group">
-                            
-                        </div>
-                        
-
-                    <button type="submit" class="btn btn-danger">Click Me</button>
-                    </form>
-                    <select name="neighborhood" id="hood" class="neighborhood ui search dropdown"
+                            <select name="neighborhood" id="hood" class="neighborhood ui search dropdown"
                                 placeholder="Select Neighborhood" data-search="true" form="searchForm">
-                             
+
                                 <option value="">Select Neighborhood</option>
                                 <option value="Rogers Park">Rogers Park</option>
                                 <option value="West Ridge">West Ridge</option>
@@ -134,6 +128,12 @@
 
 
                             </select>
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-danger">Click Me</button>
+                    </form>
                 </div>
             </div>
 
@@ -148,6 +148,10 @@
                         <a href="/report">Report</a>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="card-body mt-5" id="report-info">
                     <div class="crimeDesc pb-2">
                         <h3 id="align">Reporting Info</h3>
@@ -156,13 +160,12 @@
                         <p>So if you see a crime taking place, call the police. If you cannot call the police, tell
                             us, and we will add it to our mapping.</p>
                     </div>
-                    <!-- <div class="pb-5 pt-0" id="reportBtn">
-                            <a href="#report">Report</a>
-                        </div> -->
-                </div>
 
+                </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 </header>
 <section class="grey">
@@ -182,7 +185,7 @@
             </div>
         </div>
     </div>
-
+</section>
     <div id="height" class="container grey">
         <div class="row">
             <div id="bottom-border" class="col-md-2 justify-content-center">
@@ -190,8 +193,8 @@
             </div>
         </div>
     </div>
-</section>
-<section class="white">
+
+<section class="grey">
     <div class="flex-container r-container">
         <div class="row" id="left">
             <div class="col-md-3 mr-2">
@@ -209,7 +212,7 @@
 
         </div>
     </div>
-
+</section>
     <div id="height" class="container white">
         <div class="row">
             <div id="bottom-border" class="col-md-2 justify-content-center">
@@ -217,8 +220,8 @@
             </div>
         </div>
     </div>
-</section>
-<section class="pb">
+
+<section class="grey">
     <div class="flex-container l-container">
         <div class="row" id="left">
             <div class="col-md-6">

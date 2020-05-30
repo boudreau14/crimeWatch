@@ -1,5 +1,5 @@
 {
-  "name": "crimeWatch",
+  "name": "crimewatch",
   "version": "1.0.0",
   "description": "-Node \r -Express \r -MySQL \r -Handlebars \r -Jquery",
   "main": "server.js",

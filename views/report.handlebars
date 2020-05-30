@@ -23,9 +23,8 @@
     </nav>
         
     <article class="image-report">
-       <div class="container">
+       <div class="container" id="flex">
     <div class="card shadow-lg">
-       
 
             <div class="row">
 
@@ -46,7 +45,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form_name">Neighborhood *</label>
-                                        <input id="hood" method="submit" value="" type="text" name="neighborhood" class="hood_id"
+                                        <input id="hood" method="submit" value="" name="neighborhood" class="hood_id"
                                             placeholder="Name of Neighborhood *" required="required"
                                             data-error="Firstname is required.">
                                         <div class="help-block with-errors"></div>
@@ -66,6 +65,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="form_need">Were Police Called? *</label>
+                                        <br>
                                         <select id="police_called" method="submit" value="" name="police_called" class="arrest_id" required="required"
                                             data-error="Yes or No">
                                             <option value=""></option>
@@ -99,7 +99,7 @@
                                     <div class="form-group">
                                         <label for="form_message">Leave a description *</label>
                                         <textarea id="notes" method="submit" value="" name="notes" class="desc_id"
-                                            placeholder="Description of Incident" rows="4" required="required"
+                                            placeholder="Message for me *" rows="4" required="required"
                                             data-error="Please, leave us a message."></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>

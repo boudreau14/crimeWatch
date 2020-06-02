@@ -35,18 +35,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6" id="align">
-                <div class="card-body">
+                <div class="card-body" >
 
                     <form action="/map/neighborhood" method="GET" class="searchForm" id="searchForm">
-                        
+                        <input type="text">
                         <div class="crimeDesc">
                             <p>Search by Neighborhood</p>
                         </div>
                         <br>
                         <div class="input-group">
-                            <select name="neighborhood" id="hood" class="neighborhood ui search dropdown"
-                                placeholder="Select Neighborhood" data-search="true" form="searchForm">
+                            
+                        </div>
+                        
 
+                    <button type="submit" class="btn btn-danger">Click Me</button>
+                    </form>
+                    <select name="neighborhood" id="hood" class="neighborhood ui search dropdown"
+                                placeholder="Select Neighborhood" data-search="true" form="searchForm">
+                             
                                 <option value="">Select Neighborhood</option>
                                 <option value="Rogers Park">Rogers Park</option>
                                 <option value="West Ridge">West Ridge</option>
@@ -128,12 +134,6 @@
 
 
                             </select>
-
-                        </div>
-
-
-                        <button type="submit" class="btn btn-danger">Click Me</button>
-                    </form>
                 </div>
             </div>
 
@@ -148,10 +148,6 @@
                         <a href="/report">Report</a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
                 <div class="card-body mt-5" id="report-info">
                     <div class="crimeDesc pb-2">
                         <h3 id="align">Reporting Info</h3>
@@ -160,24 +156,31 @@
                         <p>So if you see a crime taking place, call the police. If you cannot call the police, tell
                             us, and we will add it to our mapping.</p>
                     </div>
-
+                    <!-- <div class="pb-5 pt-0" id="reportBtn">
+                            <a href="#report">Report</a>
+                        </div> -->
                 </div>
+
             </div>
         </div>
-    </div>
-    </div>
     </div>
 </header>
 <section class="grey">
     <div class="flex-container l-container">
         <div class="row" id="left">
             <div class="col-md-6">
-                <h2 class="mb-5">How Crime Mappers Works?</h2>
-                <p id="largeText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <h2 class="mb-5">We've got your 6!</h2>
+                <p id="largeText">After years of publicity for being a notoriously dagerous city, our creators 
+                    decided that Chicago visitors and residents needed a way to track the crimes that impact the areas in which 
+                    they are involved in. It seemed to be that the concept of putting the crimes and the corresponding 
+                    neighborhoods on a heatmap make it easier for the Crime Mappers user to pinpoint the nearest wrong-doing
+                    and helps them figure out just what the evil doer has done. We concluded that knowing the area that 
+                    you are visiting or living in and the criminal atmosphere of the neighborhood can help you stay alert
+                    and aware to live a happier and safer life. Crime Mappers makes it possible to pull up the app and glance at 
+                    live updates of freshly reported crimes that may have happened close to you. Our hope is that Crime Mappers
+                    can assist with safety and prevent our database from growing as we know that knowledge is power and this 
+                    app is indeed a powerful tool in keeping Chicago informed.
+                </p>
             </div>
             <div class="col-md-3 ml-2">
                 <div class="flag-image-side"><img src="images/flag.jpg" alt="flag-image" class="flag-image">
@@ -185,7 +188,7 @@
             </div>
         </div>
     </div>
-</section>
+
     <div id="height" class="container grey">
         <div class="row">
             <div id="bottom-border" class="col-md-2 justify-content-center">
@@ -193,8 +196,8 @@
             </div>
         </div>
     </div>
-
-<section class="grey">
+</section>
+<section class="white">
     <div class="flex-container r-container">
         <div class="row" id="left">
             <div class="col-md-3 mr-2">
@@ -202,17 +205,23 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2 class="mb-5">How Crime Mappers Works?</h2>
-                <p id="largeText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <h2 class="mb-5">First on the scene.</h2>
+                <p id="largeText">While there are many other web apps that alert residents and visitors of Chicago about
+                    the crime that is happening around the city, Crime Mappers originated out of the first hand experience 
+                    of one of our creators. The development of the application started after our very own Derek Fuenning
+                    was living in the Midwestern Capital of Illinois and decided that it would help him tremendously to have 
+                    access to a site similar to the one our team has constructed after hearing Derek's stories and opinions 
+                    on Chicago's criminal activity. We believe that what separates our application from the rest is a personal 
+                    history and real life experience that shapes the development of Crime Mappers abilities and functionality.
+                    It is likely that Chicago will continue to have up and down crime statistics as the years press on, and 
+                    that people will continue to live among it or visit the city for shopping and a show. With that being the 
+                    case, let Crime Mappers guide your way as we will continue to show our support for all throughout Chicago. 
+                </p>
             </div>
 
         </div>
     </div>
-</section>
+
     <div id="height" class="container white">
         <div class="row">
             <div id="bottom-border" class="col-md-2 justify-content-center">
@@ -220,17 +229,20 @@
             </div>
         </div>
     </div>
-
-<section class="grey">
+</section>
+<section class="pb">
     <div class="flex-container l-container">
         <div class="row" id="left">
             <div class="col-md-6">
                 <h2 class="mb-5">How Crime Mappers Works?</h2>
-                <p id="largeText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <p id="largeText">Crime Mappers is an app that does not need you to be too tech savy, and in fact the only
+                    major heavy lifting that needs done is when a crime is reported which just entails typing. It does hold 
+                    the power of making the user notified of serious crimes committed, but we hope that is half the battle in
+                    keeping our users safe and up to speed on areas that yield more danger. Let Crime Mappers be your watch-
+                    ful eye and help you navigate Chicago safely as our heatmap is our most significant feature. The heatmap 
+                    makes it possible for users to glance at a geographical layout of the city and is informative to say the
+                    least in showing the crimes that happen in a given region. 
+                </p>
             </div>
             <div class="col-md-3 ml-2">
                 <div class="flag-image-side"><img src="images/flag.jpg" alt="flag-image" class="flag-image">

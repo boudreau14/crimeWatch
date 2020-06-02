@@ -29,10 +29,22 @@ nav {
 }
 
 .card-body {
-    background-color: rgba(255, 255, 255, 0.52);
-
+    background-color: rgba(53, 53, 53, 0.8);
 }
 
+h2 {
+    text-decoration: underline;
+    text-decoration-color: #ED5565;
+}
+
+#cardHeight {
+    height: 290px;
+}
+.crimeDesc p {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
 .searchForm {
     margin-top: 30px auto 0 auto;
     padding: inherit;
@@ -67,24 +79,24 @@ nav {
     /* padding-top: 40%;
     padding-bottom: 40%; */
     text-align: center;
+    
 }
 
-/* .card-body {
-    background-color: #fff;
-} */
+
 
 #reportBtn a {
 
     padding: 12px 25px;
-    background-color: none;
+    background-color: #ED5565;
     border: 3px solid #ED5565;
-    color: #ED5565;
-    font-size: .8rem;
+    color: #fff;
+    font-size: 1rem;
     letter-spacing: 2px;
     position: relative;
     /* top: 80px; */
     overflow: hidden;
     transition: .5s;
+    
     /* display: inline-block; */
 }
 
@@ -143,6 +155,11 @@ nav {
     #report-info {
         display: none;
     }
+    
+    .input-group {
+        display: flex;
+        justify-content: center;
+    }
 
     article {
         text-align: center;
@@ -165,9 +182,19 @@ nav {
 
 /* BODY SECTION */
 
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
 
+#flag-image {
+    display: flex;
+    align-items: center;
+}
 
 .flag-image {
+   
     height: 300px;
     width: 275px;
     border-radius: 50%;
@@ -177,13 +204,16 @@ nav {
     padding-bottom: 150px;
 }
 
+#bottom {
+    padding-bottom: 50px;
+}
 
 #height {
     height: 50px;
     width: 5%;
     border-top: 6px dotted gray;
     /* margin-bottom: 40px; */
-    margin-top: 40px;
+    padding-top: 50px;
 }
 
 section {
@@ -191,8 +221,11 @@ section {
 }
 
 .grey {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 /* FOOTER SECTION */
@@ -213,7 +246,7 @@ section {
 
 }
 #police_called {
-    width: 130px;
+    width: 100px;
 }
 
 #flex {

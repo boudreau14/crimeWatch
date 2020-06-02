@@ -16,7 +16,8 @@ nav {
 }
 
 .map-wrap {
-    background-color: lightblue;
+    background-image: linear-gradient(to bottom right, #fff, rgb(187, 184, 184), rgb(68, 68, 68));
+
 
 }
 
@@ -29,7 +30,7 @@ nav {
 
 #header-card {
     text-align: center;
-    background-color: lightgray;
+    background-color: none;
 
 }
 
